@@ -9,3 +9,6 @@ babel-node는 새로 나온 규격들의 js들을 이전 버전에 맞추어 호
 
 //In the nodemon.json
 nodemon.json은 실행시켜주는 도구들을 넣어줌..
+
+//yarn add dotenv
+.env 파일을 읽음
