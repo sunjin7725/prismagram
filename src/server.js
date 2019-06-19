@@ -1,5 +1,5 @@
 import "./env";
-import {GraphQLServer} from "graphql-yoga";
+import { GraphQLServer } from "graphql-yoga";
 import logger from "morgan";
 import schema from "./schema";
 import "./passtport";
@@ -7,9 +7,12 @@ import { authenticateJwt } from "./passtport";
 
 const PORT = process.env.PORT || 4000;
 
-const server = new GraphQLServer({ schema, context:({request})=>({request}) });
+const server = new GraphQLServer({
+    schema,
+    context: ({ request }) => ({ request })
+});
 
 server.express.use(logger("dev"));
 server.express.use(authenticateJwt);
 
-server.start({port:PORT}, () => console.log(`Server running on port http://localhost:${PORT}`));
+server.start({ port: PORT }, () => console.log(`Server running on port http://localhost:${PORT}`));
