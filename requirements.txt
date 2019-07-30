@@ -1,9 +1,0 @@
-yarn add nodemon
-yarn add babel-cli
-yarn add @babel/node
-yarn add babel-preset-env
-yarn add babel-core
-yarn add morgan //로깅용 모듈
-yarn add graphql-tools
-yarn add merge-graphql-schemas
-yarn add prisma-client-lib
