@@ -1,7 +1,6 @@
 import multer from "multer";
 import multerS3 from "multer-s3";
 import aws from "aws-sdk";
-import "./env";
 
 const s3 = new aws.S3({
     accessKeyId: process.env.AWS_KEY,
@@ -13,7 +12,7 @@ const upload = multer({
     storage: multerS3({
         s3,
         acl: "public-read",
-        bucket: "prismagram",
+        bucket: "primagra",
         metadata: function(req, file, cb) {
             cb(null, { fieldName: file.fieldname });
         },
